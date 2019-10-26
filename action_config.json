@@ -1,56 +1,45 @@
 {
-    "pick": { 
-        "function": "execute_pick",
-        "params": ["book_name"],
-        "success_reward": 25,
-        "fail_reward": -25,
-        "possibilities": {
-            "pick": 0.85,
-            "noaction": 0.15
-        }
-    },
-    "place": { 
-        "function": "execute_place",
-        "params": ["book_name", "bin_name"],
-        "success_reward": 500,
-        "fail_reward": -25,
-        "possibilities": {
-            "place": 0.85,
-            "noaction": 0.15
-        }
-    },
+    
     "moveF": { 
         "function": "execute_moveF",
         "params": [],
-        "success_reward": -10,
-        "fail_reward": -20,
+        "cost": 1,
+        "fail_reward": 0,
         "possibilities": {
-            "moveF": 0.85,
-            "noaction": 0.15
+            "moveF": 1,
+            "noaction": 0
         }
     },
     "TurnCW": { 
         "function": "execute_TurnCW",
         "params": [],
-        "success_reward": -10,
-        "fail_reward": -20,
+        "cost": 1,
         "possibilities": {
-            "TurnCW": 0.85,
-            "noaction": 0.15
+            "TurnCW": 1,
+            "noaction": 0
         }
     },
     "TurnCCW": { 
         "function": "execute_TurnCCW",
         "params": [],
-        "success_reward": -10,
-        "fail_reward": -20,
+        "cost": 1,
         "possibilities": {
-            "TurnCCW": 0.85,
-            "noaction": 0.15
+            "TurnCCW": 1,
+            "noaction": 0
+        },
+    "REFUEL"{
+        "function": "execute_refuel",
+        "params":[],
+        "cost": 1,
+        "possibilities":{
+            "REFUEL": 1,
+            "noaction":0
         }
-    },
-    "noaction": {
-        "success_reward": -25,
-        "fail_reward": -25
     }
+
+    // Add Diagonal Movement Actions here.
+
+
+    ,
+
 }

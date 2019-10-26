@@ -23,20 +23,11 @@ def get_current_state():
 
 
 def is_terminal_state(state):
-    rospy.wait_for_service('is_terminal_state')
+    rospy.wait_for_service('is_goal_state')
     try:
-        is_term_state = rospy.ServiceProxy('is_terminal_state', IsTerminalState)
+        is_term_state = rospy.ServiceProxy('is_goal_state', IsTerminalState)
         response = is_term_state(json.dumps(state))
         return response.value == 1
-    except rospy.ServiceException, e:
-        print "Service call failed: %s"%e
-
-
-def reset_world():
-    rospy.wait_for_service('reset_world')
-    try:
-        handle = rospy.ServiceProxy('reset_world', ResetWorldMsg)
-        response = handle()
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
 
@@ -78,27 +69,3 @@ def get_possible_states(state, action, action_params):
         return json.loads(response.states)
     except rospy.ServiceException, e:
         print "Service call failed: %s"%e
-
-
-def get_reward(state, action, next_state):
-    rospy.wait_for_service('get_reward')
-    try:
-        get_reward = rospy.ServiceProxy('get_reward', GetReward)
-        state = json.dumps(state)
-        next_state = json.dumps(next_state)
-        response = get_reward(state, action, next_state)
-        return response.reward
-    except rospy.ServiceException, e:
-        print "Service call failed: %s"%e
-
-
-def execute_action(action, action_params):
-    rospy.wait_for_service('execute_action')
-    try:
-        execute_action = rospy.ServiceProxy('execute_action', ActionMsg)
-        action_params = json.dumps(action_params)
-        response = execute_action(action, action_params)
-        return response.success, json.loads(response.next_state)
-    except rospy.ServiceException, e:
-        print "Service call failed: %s"%e
-
