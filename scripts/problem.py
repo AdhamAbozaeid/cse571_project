@@ -12,7 +12,7 @@ __docformat__ = 'reStructuredText'
 
 import sys
 import rospy
-from ai_571_project.srv import *
+from cse571_project.srv import *
 import collections
 
 class State:
@@ -21,7 +21,7 @@ class State:
 
     """
     
-    def __init__(self,x,y,orientation):
+    def __init__(self,x,y,orientation,battery):
         """
         :param x: current x-cordinate of turtlebot
         :type x: float
@@ -37,7 +37,7 @@ class State:
         self.battery = battery
 
     def __eq__(self, other):
-        if self.x == other.x and self.y == other.y and self.orientation == other.orientation and self.battery = other.battery:
+        if self.x == other.x and self.y == other.y and self.orientation == other.orientation and self.battery == other.battery:
             return True
         else:
             return False
@@ -91,11 +91,11 @@ class Helper:
 
         try:
             get_successor = rospy.ServiceProxy('get_successor', GetSuccessor)
-            response = get_successor(curr_state.x, curr_state.y, curr_state.orientation)
+            response = get_successor(curr_state.x, curr_state.y, curr_state.orientation,curr_state.battery)
             states = collections.OrderedDict()
 
             for i in range(4):
-                states[response.action[i]] = (State(response.x[i], response.y[i], response.direction[i]), response.battery[i], response.g_cost[i])
+                states[response.action[i]] = (State(response.x[i], response.y[i], response.direction[i], response.battery[i]), response.g_cost[i])
             return states
         
         except rospy.ServiceException, e:

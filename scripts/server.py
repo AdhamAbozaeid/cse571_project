@@ -10,7 +10,7 @@ __maintainers__ = ["Pulkit Verma", "Abhyudaya Srinet"]
 __contact__ = "aair.lab@asu.edu"
 __docformat__ = 'reStructuredText'
 
-from ai_571_project.srv import *
+from cse571_project.srv import *
 import rospy
 from gen_maze import *
 import sys
@@ -63,7 +63,7 @@ def handle_get_successor(req):
 		output:   
 			GetSuccessorResponse (search/srv/GetSuccessor.srv)
 	"""
-	global mazeInfo
+	global mazeInfo,num_fuel_stations
 	action_list = []
 	direction_list = ["NORTH", "EAST", "SOUTH", "WEST"]
 	state_x = []
@@ -71,12 +71,11 @@ def handle_get_successor(req):
 	state_direction = []
 	state_cost = []
 	state_battery = []
-	
+	x_cord, y_cord, direction,battery = req.x, req.y, req.direction,req.battery
 	nearby_clearance = 0.1
 	refueling_cost = 0.5
-	fuel_stations_locations = mazeInfo[-1]
+	fuel_stations = mazeInfo[-1]
 	FULL_BATTERY_CAPACITY = 10
-	x_cord, y_cord, direction,battery = req.x, req.y, req.direction,req.battery
 
 
 	if battery>0:
@@ -85,7 +84,7 @@ def handle_get_successor(req):
 	if num_fuel_stations!=len(fuel_stations):
 		print("Something is wrong!")
 	##Check if state is eligible for refueling station
-	for (fx,fy) in fuel_stations_locations:
+	for (fx,fy) in fuel_stations:
 		if manhattanDistance(fx,fy,req.x,req.y)<=nearby_clearance:
 			print("Robot is near fuelling station!")
 			action_list.append("REFUEL")
@@ -95,16 +94,13 @@ def handle_get_successor(req):
 
 	for action in action_list:
 		#Checking requested action and making changes in states
-
+		x_cord, y_cord, direction,battery = req.x, req.y, req.direction,req.battery
 		if action == 'REFUEL':
 			state_x.append(req.x)
 			state_y.append(req.y)
-			state_battery = FULL_BATTERY_CAPACITY		#FOR NOW, ALL FUEL STATIONS REFILL ROBOT TO FULL CAPACITY
+			state_battery.append(FULL_BATTERY_CAPACITY)		#FOR NOW, ALL FUEL STATIONS REFILL ROBOT TO FULL CAPACITY
 			state_direction.append(direction)
 			state_cost.append(refueling_cost)
-
-
-
 
 		if action == 'TurnCW':
 			index = direction_list.index(req.direction)
@@ -148,6 +144,7 @@ def handle_get_successor(req):
 			state_y.append(-1)
 			state_direction.append(direction)
 			state_cost.append(-1)
+			state_battery.append(battery) #Since bot can't move on invalid edge, assume that no battery is exhausted.
 		else:
 			state_x.append(x_cord)
 			state_y.append(y_cord)
@@ -178,9 +175,7 @@ def handle_is_goal_state(req):
     This function will return True if turtlebot3 is at goal state otherwise it will return False.
 	"""
 	global mazeInfo
-
 	goal_state = mazeInfo[0][1]*0.5
-
 	if req.x == req.y and req.x == goal_state:
 		return IsGoalStateResponse(1)
 
@@ -191,20 +186,8 @@ def handle_get_goal_state(req):
 	goal_state = mazeInfo[0][1]*0.5
 	return GetGoalStateResponse(goal_state,goal_state)
 
-
-
-def handle_get_current_state():
-	global mazeInfo
-
-def handle_get_possible_actions():
-	global mazeInfo
-
-def handle_get_possible_states():
-	global mazeInfo
-	
-
-
-
+def handle_get_actions(req):
+	return "TurnCW,TurnCCW,MoveB,MoveF,REFUEL"
 
 def server():
     rospy.init_node('get_successor_server')
@@ -212,11 +195,7 @@ def server():
     rospy.Service('get_initial_state', GetInitialState, handle_get_initial_state)
     rospy.Service('is_goal_state', IsGoalState, handle_is_goal_state)
     rospy.Service('get_goal_state',GetGoalState,handle_get_goal_state)
-    
-    rospy.Service('get_current_state',handle_get_current_state)
-    rospy.Service('get_possible_actions',handle_get_possible_actions)
-    rospy.Service('get_possible_states', handle_get_possible_states)
-
+    rospy.Service('get_all_actions',GetActions,handle_get_actions)
 
     print "Ready!"
     rospy.spin()
@@ -229,4 +208,5 @@ if __name__ == "__main__":
     	exit()
     my_maze = Maze()
     mazeInfo = my_maze.generate_maze(args.grid_dimension, args.n_obstacles, args.seed,args.num_fuel_stations)
+    num_fuel_stations = args.num_fuel_stations
     server()	

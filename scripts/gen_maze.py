@@ -30,7 +30,8 @@ class Maze:
 	def add_walls_description(self, f_out):
 		for i in range(1, 5):
 			f_out.write('<model name=\'wall{}\'>\n'.format(i))
-			f_out.write('<static>1</static>\n<link name=\'link\'>\n<pose frame=\'\'>0 0 0.42 0 -0 0</pose>\n')
+			f_out.write('<static>1</static>\n<link name=\'link\'>\n<pose frame=\'\'>0 0 0.42 0 -0 0</pose>\n<collision name=\'collision\'>\n<geometry>\n<box>\n<size>7.5 0.2 2.8</size>\n</box>\n')
+			f_out.write('</geometry>\n<max_contacts>10</max_contacts>\n<surface>\n<contact>\n<ode/>\n</contact>\n<bounce/>\n<friction>\n<torsional>\n<ode/>\n</torsional>\n<ode/>\n</friction>\n</surface>\n</collision>\n')
 			f_out.write('<visual name=\'visual\'>\n<cast_shadows>0</cast_shadows>\n<geometry>\n<box>\n<size>7.5 0.2 2.8</size>\n</box>\n</geometry>\n<material>\n<script>\n')
 			f_out.write('<uri>model://grey_wall/materials/scripts</uri>\n<uri>model://grey_wall/materials/textures</uri>\n<name>vrc/grey_wall</name>\n</script>\n</material>\n</visual>\n<self_collide>0</self_collide>\n')
 			f_out.write('<kinematic>0</kinematic>\n<gravity>1</gravity>\n</link>\n<pose frame=\'\'>-0.779308 4.01849 0 0 -0 0</pose>\n</model>\n')
@@ -48,21 +49,23 @@ class Maze:
 			f_out.write('<velocity>0 0 0 0 -0 0</velocity>\n<acceleration>0 0 0 0 -0 0</acceleration>\n<wrench>0 0 0 0 -0 0</wrench>\n</link>\n</model>\n')
 
 	#Method to add description for cans
-	def add_can_description(self, f_out, coords):
-		for i in coords:
-			x, y = i
-			f_out.write('<model name=\'can{}{}\'>\n'.format(x, y))
-			f_out.write('<link name=\'link\'>\n<pose frame=\'\'>0 0 0.115 0 -0 0</pose>\n<inertial>\n<mass>0.39</mass>\n<inertia>\n<ixx>0.00058</ixx>\n<ixy>0</ixy>\n<ixz>0</ixz>\n<iyy>0.00058</iyy>\n<iyz>0</iyz>\n<izz>0.00019</izz>\n</inertia>\n</inertial>\n')
-			f_out.write('\n<visual name=\'visual\'>\n<geometry>\n<cylinder>\n<radius>0.055</radius>\n<length>0.23</length>\n</cylinder>\n</geometry>\n<material>\n<script>\n<uri>model://beer/materials/scripts</uri>\n<uri>model://beer/materials/textures</uri>\n<name>Beer/Diffuse</name>\n</script>\n</material>\n</visual>\n')
-			f_out.write('<self_collide>0</self_collide>\n<kinematic>0</kinematic>\n<gravity>1</gravity>\n</link>\n<pose frame=\'\'>0.888525 -2.58346 0 0 -0 0</pose>\n</model>\n')
-			f_out.write('<gui fullscreen=\'0\'>\n<camera name=\'user_camera\'>\n<pose frame=\'\'>5 -5 2 0 0.275643 2.35619</pose>\n<view_controller>orbit</view_controller>\n<projection_type>perspective</projection_type>\n</camera>\n</gui>\n')
-
-
-	def add_fuel_station(self,f_out,x,y):
-		raise NotImplementedError
-
-	def add_fuel_station_description(self,f_out,x,y):
-		raise NotImplementedError
+	def add_can_description(self, f_out, coords,solid = True):
+		if solid:
+			for i in coords:
+				x, y = i
+				f_out.write('<model name=\'can{}{}\'>\n'.format(x, y))
+				f_out.write('<link name=\'link\'>\n<pose frame=\'\'>0 0 0.115 0 -0 0</pose>\n<inertial>\n<mass>0.39</mass>\n<inertia>\n<ixx>0.00058</ixx>\n<ixy>0</ixy>\n<ixz>0</ixz>\n<iyy>0.00058</iyy>\n<iyz>0</iyz>\n<izz>0.00019</izz>\n</inertia>\n</inertial>\n<collision name=\'collision\'>\n<geometry>\n<cylinder>\n<radius>0.055</radius>\n<length>0.23</length>\n</cylinder>\n</geometry>\n')
+				f_out.write('<max_contacts>10</max_contacts>\n<surface>\n<contact>\n<ode/>\n</contact>\n<bounce/>\n<friction>\n<torsional>\n<ode/>\n</torsional>\n<ode/>\n</friction>\n</surface>\n</collision>\n<visual name=\'visual\'>\n<geometry>\n<cylinder>\n<radius>0.055</radius>\n<length>0.23</length>\n</cylinder>\n</geometry>\n<material>\n<script>\n<uri>model://beer/materials/scripts</uri>\n<uri>model://beer/materials/textures</uri>\n<name>Beer/Diffuse</name>\n</script>\n</material>\n</visual>\n')
+				f_out.write('<self_collide>0</self_collide>\n<kinematic>0</kinematic>\n<gravity>1</gravity>\n</link>\n<pose frame=\'\'>0.888525 -2.58346 0 0 -0 0</pose>\n</model>\n')
+				f_out.write('<gui fullscreen=\'0\'>\n<camera name=\'user_camera\'>\n<pose frame=\'\'>5 -5 2 0 0.275643 2.35619</pose>\n<view_controller>orbit</view_controller>\n<projection_type>perspective</projection_type>\n</camera>\n</gui>\n')
+		else:
+			for i in coords:
+				x, y = i
+				f_out.write('<model name=\'can{}{}\'>\n'.format(x, y))
+				f_out.write('<link name=\'link\'>\n<pose frame=\'\'>0 0 0.115 0 -0 0</pose>\n<inertial>\n<mass>0.39</mass>\n<inertia>\n<ixx>0.00058</ixx>\n<ixy>0</ixy>\n<ixz>0</ixz>\n<iyy>0.00058</iyy>\n<iyz>0</iyz>\n<izz>0.00019</izz>\n</inertia>\n</inertial>\n')
+				f_out.write('<visual name=\'visual\'>\n<geometry>\n<cylinder>\n<radius>0.055</radius>\n<length>0.23</length>\n</cylinder>\n</geometry>\n<material>\n<script>\n<uri>model://beer/materials/scripts</uri>\n<uri>model://beer/materials/textures</uri>\n<name>Beer/Diffuse</name>\n</script>\n</material>\n</visual>\n')
+				f_out.write('<self_collide>0</self_collide>\n<kinematic>0</kinematic>\n<gravity>1</gravity>\n</link>\n<pose frame=\'\'>0.888525 -2.58346 0 0 -0 0</pose>\n</model>\n')
+				f_out.write('<gui fullscreen=\'0\'>\n<camera name=\'user_camera\'>\n<pose frame=\'\'>5 -5 2 0 0.275643 2.35619</pose>\n<view_controller>orbit</view_controller>\n<projection_type>perspective</projection_type>\n</camera>\n</gui>\n')
 
 
 	#Method to place cans inside the maze
@@ -99,27 +102,25 @@ class Maze:
 
 	#Method to generate maze
 	def generate_maze(self, grid_dimension, n_obstacles, seed, num_fuel_stations = 3, battery = 10, scale=0.5):
-		np.random.seed(seed)
 		blocked_edges = set()
-
-		fuel_stations = set()
-			
+		fuel_stations = []
 		coords = []
 		f_out = self.copy_empty_world()
 		self.add_walls(f_out, grid_dimension*scale)
 		count = 1
-		
-		while count<=num_fuel_stations:		#Randomly place fuel stations
+		np.random.seed(seed+1)
+		#Randomly place fuel stations
+		while count<=num_fuel_stations:
 			x = scale*np.random.randint(0, grid_dimension+1)
 			y = scale*np.random.randint(0, grid_dimension+1)
 			if (x == 0 and y == 0) or ((x,y) in fuel_stations):  # do not block edges starting at origin
 				continue
-			self.add_fuel_station(f_out,x,y)
-			self.add_goal_description(f_out,x,y)
-			fuel_stations.add((x,y))
-
+			self.add_can(f_out,x,y)
+			fuel_stations.append((x,y))
+			count+=1
 
 		count = 1
+		np.random.seed(seed)
 		while(count <= n_obstacles):
 			x = scale*np.random.randint(0, grid_dimension+1)
 			y = scale*np.random.randint(0, grid_dimension+1)
@@ -146,8 +147,15 @@ class Maze:
 		f_out.write('</state>')
 		self.add_goal_description(f_out, grid_dimension*0.5)
 		self.add_walls_description(f_out)
-		self.add_can_description(f_out, coords)
+		self.add_can_description(f_out,coords)
+		
+		#Add Fuel stations : Collision free cans
+		self.add_can_description(f_out,fuel_stations,solid=False)
+
 		f_out.write('</world>\n</sdf>')
 		f_out.close()
+		print "fuel stations:" + str(fuel_stations)
+		#print "obstacles:" + str(coords)
 		maze = [(0, grid_dimension, 'EAST', battery, scale), blocked_edges, fuel_stations]
+		#print "number of blocked edges = " + str(len(blocked_edges))
 		return maze
