@@ -98,7 +98,7 @@ def get_possible_states(curr_state, action):
 
 
 if __name__ == "__main__":
-    state_to_check = problem.State(0,2.5,'EAST',5)
+    state_to_check = problem.State(1.0,1.5,'EAST',5)
     action_to_check = 'REFUEL'
     
     initial_state = get_current_state()
