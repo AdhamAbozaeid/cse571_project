@@ -46,32 +46,74 @@ class moveTbot3:
 			quat = (current_pose.orientation.x,current_pose.orientation.y,current_pose.orientation.z,current_pose.orientation.w)
 			euler = tf.transformations.euler_from_quaternion(quat)
 			current_yaw = euler[2]
-			if current_yaw > (-math.pi /4.0) and current_yaw < (math.pi / 4.0):
-				print "Case 1"
-				#raw_input()
-				target_pose = copy.deepcopy(current_pose)
-				target_pose.position.x += 0.5
-				#direction = 'x'
-				#incr y co-ordinate
-			elif current_yaw > (math.pi / 4.0 ) and current_yaw < (3.0 * math.pi / 4.0):
-				print "Case 2"
-				#raw_input()
-				target_pose = copy.deepcopy(current_pose)
-				target_pose.position.y += 0.5
-				#direction = 'y'
-				#decr x co
-			elif current_yaw > (-3.0*math.pi /4.0) and current_yaw < (-math.pi /4.0):
-				print "Case 3"
-				#raw_input()
-				target_pose = copy.deepcopy(current_pose)
-				target_pose.position.y -= 0.5
-				#direction = '-y'
+
+			position_change = {
+				"MoveF" :  {
+					"EAST" : {
+						"X" : 0.5,
+						"Y" : 0.0
+					},
+					"NORTH_EAST": {
+						"X": 0.5,
+						"Y": 0.5
+					},
+					"NORTH" : {
+						"X" : 0.0,
+						"Y" : 0.5
+					},
+					"NORTH_WEST": {
+						"X": 0.5,
+						"Y": -0.5
+					},
+					"WEST" : {
+						"X" : -0.5,
+						"Y" : 0.0
+					},
+					"SOUTH_WEST": {
+						"X": -0.5,
+						"Y": -0.5
+					},
+					"SOUTH" : {
+						"X" : 0.0,
+						"Y" : -0.5
+					},
+					"SOUTH_EAST": {
+						"X": 0.5,
+						"Y": -0.5
+					},
+				},
+			}
+
+			direction = "WEST"
+			if action == "MoveF":
+				factor = 1
 			else:
+				factor = -1
+			if current_yaw > (-math.pi / 8.0) and current_yaw < (math.pi / 8.0):  # Facing EAST
+				print "Case EAST"
+				direction = "EAST"
+			if current_yaw > (math.pi / 8.0) and current_yaw < (3.0 * math.pi / 8.0):  # Facing NORTH EAST
+					print "Case NORTH_EAST"
+					direction = "NORTH_EAST"
+			elif current_yaw > (3.0 * math.pi / 8.0 ) and current_yaw < (5.0 * math.pi / 8.0):  # Facing NORTH
+				print "Case NORTH"
+				direction = "NORTH"
+			elif current_yaw > (5 * math.pi / 8.0) and current_yaw < (7.0 * math.pi / 8.0):  # Facing NORTH WEST
+				print "Case NORTH_WEST"
+				direction = "NORTH_WEST"
+			elif current_yaw > (-5.0 * math.pi / 8.0) and current_yaw < (-3.0 * math.pi / 8.0):  # Facing SOUTH
+				print "Case SOUTH"
+				direction = "SOUTH"
+			elif current_yaw > (-7.0 * math.pi / 8.0) and current_yaw < (-5.0 * math.pi / 8.0):  # Facing SOUTH WEST
+				print "Case SOUTH_WEST"
+				direction = "SOUTH_WEST"
+			else:  # Facing WEST
 				print "Case 4"
-				#raw_input()
-				target_pose = copy.deepcopy(current_pose)
-				target_pose.position.x -= 0.5
-				#direction = '-x'
+				direction = "WEST"
+			target_pose = copy.deepcopy(current_pose)
+			target_pose.position.x += (position_change[action][direction]["X"] * factor)
+			target_pose.position.y += (position_change[action][direction]["Y"] * factor)
+
 			PID(target_pose,"linear").publish_velocity()
 			
 		elif action == "TurnCW" or action == "TurnCCW":
@@ -80,11 +122,11 @@ class moveTbot3:
 			euler = tf.transformations.euler_from_quaternion(quat)
 			yaw = euler[2]
 			if action == "TurnCW":
-				target_yaw = yaw - ( math.pi / 2.0)
+				target_yaw = yaw - ( math.pi / 4.0)
 				if target_yaw < -math.pi:
 					target_yaw += (math.pi * 2)
 			else:
-				target_yaw = yaw + ( math.pi / 2.0)
+				target_yaw = yaw + ( math.pi / 4.0)
 				if target_yaw >= (math.pi ):
 					target_yaw -= (math.pi * 2 )
 			target_pose = Pose()

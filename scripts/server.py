@@ -65,7 +65,7 @@ def handle_get_successor(req):
 	"""
 	global mazeInfo,num_fuel_stations
 	action_list = []
-	direction_list = ["NORTH", "EAST", "SOUTH", "WEST"]
+	direction_list = ["NORTH", "NORTH_EAST", "EAST", "SOUTH_EAST", "SOUTH", "SOUTH_WEST", "WEST", "NORTH_WEST"]
 	state_x = []
 	state_y = []
 	state_direction = []
@@ -104,33 +104,33 @@ def handle_get_successor(req):
 
 		if action == 'TurnCW':
 			index = direction_list.index(req.direction)
-			direction = direction_list[(index+1)%4]
+			direction = direction_list[(index+1)%len(action_list)]
 			g_cost = 2
 
 		elif action == 'TurnCCW':
 			index = direction_list.index(req.direction)
-			direction = direction_list[(index-1)%4]
+			direction = direction_list[(index-1)%len(action_list)]
 			g_cost = 2
 
 		elif action == 'MoveF':
-			if direction == "NORTH":
+			if direction == "NORTH" or direction == "NORTH_EAST" or direction == "NORTH_WEST":
 				y_cord += 0.5
-			elif direction == "EAST":
+			if direction == "EAST" or direction == "NORTH_EAST" or direction == "SOUTH_EAST":
 				x_cord += 0.5
-			elif direction == "SOUTH":
+			if direction == "SOUTH" or direction == "SOUTH_EAST" or direction == "SOUTH_WEST":
 				y_cord -= 0.5
-			elif direction == "WEST":
+			if direction == "WEST" or direction == "NORTH_WEST" or direction == "SOUTH_WEST":
 				x_cord -= 0.5
 			g_cost = 1
 
 		elif action == 'MoveB':
-			if direction == "NORTH":
+			if direction == "NORTH" or direction == "NORTH_EAST" or direction == "NORTH_WEST":
 				y_cord -= 0.5
-			elif direction == "EAST":
+			if direction == "EAST" or direction == "NORTH_EAST" or direction == "SOUTH_EAST":
 				x_cord -= 0.5
-			elif direction == "SOUTH":
+			if direction == "SOUTH" or direction == "SOUTH_EAST" or direction == "SOUTH_WEST":
 				y_cord += 0.5
-			elif direction == "WEST":
+			if direction == "WEST" or direction == "NORTH_WEST" or direction == "SOUTH_WEST":
 				x_cord += 0.5
 			g_cost = 3
 		
