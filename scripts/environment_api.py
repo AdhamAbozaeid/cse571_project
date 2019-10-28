@@ -57,8 +57,9 @@ def get_possible_actions(curr_state):
         get_successor = rospy.ServiceProxy('get_successor', GetSuccessor)
         response = get_successor(curr_state.x, curr_state.y, curr_state.orientation,curr_state.battery)
         states = collections.OrderedDict()
-        '''
+        
         print response
+        '''
         for i in range(len(response.action)):
             print(response.action[i])
             print str(response.x[i]) + " " + str(response.y[i]) + " "+ str(response.direction[i])+ " " + str(response.battery[i])

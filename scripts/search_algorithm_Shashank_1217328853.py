@@ -90,7 +90,7 @@ def bfs(use_custom_heuristic):
             if ((str(child_node) not in explored) and (child_node not in frontier)):# and (child_node not in frontier):
                 actions.append(action)
                 if helper.is_goal_state(child_node):
-                    print "Found goal!"
+                    print "Found goal! : "+str(child_node)
                     return actions
                     
                 frontier.append(child_node)

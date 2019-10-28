@@ -71,7 +71,7 @@ def handle_get_successor(req):
 	state_direction = []
 	state_cost = []
 	state_battery = []
-	x_cord, y_cord, direction,battery = req.x, req.y, req.direction,req.battery
+	x_cord, y_cord, direction,battery = req.x, req.y, req.orientation,req.battery
 	nearby_clearance = 0.1
 	refueling_cost = 0.5
 	fuel_stations = mazeInfo[-1]
@@ -94,7 +94,7 @@ def handle_get_successor(req):
 
 	for action in action_list:
 		#Checking requested action and making changes in states
-		x_cord, y_cord, direction,battery = req.x, req.y, req.direction,req.battery
+		x_cord, y_cord, direction,battery = req.x, req.y, req.orientation,req.battery
 		if action == 'REFUEL':
 			state_x.append(req.x)
 			state_y.append(req.y)
@@ -103,12 +103,12 @@ def handle_get_successor(req):
 			state_cost.append(refueling_cost)
 
 		if action == 'TurnCW':
-			index = direction_list.index(req.direction)
+			index = direction_list.index(req.orientation)
 			direction = direction_list[(index+1)%len(action_list)]
 			g_cost = 2
 
 		elif action == 'TurnCCW':
-			index = direction_list.index(req.direction)
+			index = direction_list.index(req.orientation)
 			direction = direction_list[(index-1)%len(action_list)]
 			g_cost = 2
 

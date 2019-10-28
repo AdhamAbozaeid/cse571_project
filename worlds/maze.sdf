@@ -99,230 +99,550 @@
         <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
 <model name='wall1'>
-<pose frame=''>-1 1.25 0 0 -0 -1.55905</pose>
-<scale>0.6 1 0.03</scale>
+<pose frame=''>-1 2.0 0 0 -0 -1.55905</pose>
+<scale>0.8 1 0.03</scale>
 <link name='link'>
-<pose frame=''>-1 1.25 0.42 0 -0 -1.55905</pose>
+<pose frame=''>-1 2.0 0.42 0 -0 -1.55905</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 0 0 -0 0</acceleration>
 <wrench>0 0 0 0 -0 0</wrench>
 </link>
 </model>
 <model name='wall2'>
-<pose frame=''>1.25 3.5 0 0 -0 0</pose>
-<scale>0.6 1 0.03</scale>
+<pose frame=''>2.0 5.0 0 0 -0 0</pose>
+<scale>0.8 1 0.03</scale>
 <link name='link'>
-<pose frame=''>1.25 3.5 0.42 0 -0 0</pose>
+<pose frame=''>2.0 5.0 0.42 0 -0 0</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 0 0 -0 0</acceleration>
 <wrench>0 0 0 0 -0 0</wrench>
 </link>
 </model>
 <model name='wall3'>
-<pose frame=''>3.5 1.25 0 0 -0 -1.55905</pose>
-<scale>0.6 1 0.03</scale>
+<pose frame=''>5.0 2.0 0 0 -0 -1.55905</pose>
+<scale>0.8 1 0.03</scale>
 <link name='link'>
-<pose frame=''>3.5 1.25 0.42 0 -0 -1.55905</pose>
+<pose frame=''>5.0 2.0 0.42 0 -0 -1.55905</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 0 0 -0 0</acceleration>
 <wrench>0 0 0 0 -0 0</wrench>
 </link>
 </model>
 <model name='wall4'>
-<pose frame=''>1.25 -1 0 0 -0 0</pose>
-<scale>0.6 1 0.03</scale>
+<pose frame=''>2.0 -1 0 0 -0 0</pose>
+<scale>0.8 1 0.03</scale>
 <link name='link'>
-<pose frame=''>1.25 -1 0.42 0 -0 0</pose>
+<pose frame=''>2.0 -1 0.42 0 -0 0</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 0 0 -0 0</acceleration>
 <wrench>0 0 0 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.01.5'>
-<pose frame=''>1.0 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can2.763880325460.0'>
+<pose frame=''>2.76388032546 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.0 1.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>2.76388032546 0.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.00.5'>
-<pose frame=''>1.0 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can3.53.23114141431'>
+<pose frame=''>3.5 3.23114141431 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.0 0.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>3.5 3.23114141431 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.51.5'>
-<pose frame=''>1.5 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can2.757155828741.0'>
+<pose frame=''>2.75715582874 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.5 1.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>2.75715582874 1.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can2.2599051560.5'>
-<pose frame=''>2.259905156 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can1.02.23399783172'>
+<pose frame=''>1.0 2.23399783172 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>2.259905156 0.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>1.0 2.23399783172 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can2.01.74774941416'>
-<pose frame=''>2.0 1.74774941416 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.7569335521183.5'>
+<pose frame=''>0.756933552118 3.5 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>2.0 1.74774941416 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.756933552118 3.5 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.7736956615671.5'>
-<pose frame=''>0.773695661567 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.7790201417580.0'>
+<pose frame=''>0.779020141758 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.773695661567 1.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.779020141758 0.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.51.71516789333'>
-<pose frame=''>0.5 1.71516789333 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can4.01.74792648795'>
+<pose frame=''>4.0 1.74792648795 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.5 1.71516789333 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>4.0 1.74792648795 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.50.723978224993'>
-<pose frame=''>1.5 0.723978224993 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can4.03.72649210659'>
+<pose frame=''>4.0 3.72649210659 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.5 0.723978224993 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>4.0 3.72649210659 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can2.00.715079580462'>
-<pose frame=''>2.0 0.715079580462 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.7601370374191.5'>
+<pose frame=''>0.760137037419 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>2.0 0.715079580462 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.760137037419 1.5 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.51.72157806801'>
-<pose frame=''>1.5 1.72157806801 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can2.00.248804004108'>
+<pose frame=''>2.0 0.248804004108 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.5 1.72157806801 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>2.0 0.248804004108 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.52.24218483489'>
-<pose frame=''>0.5 2.24218483489 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can1.260447335320.0'>
+<pose frame=''>1.26044733532 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.5 2.24218483489 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>1.26044733532 0.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.267022600641.0'>
-<pose frame=''>1.26702260064 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can1.03.74638708977'>
+<pose frame=''>1.0 3.74638708977 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.26702260064 1.0 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>1.0 3.74638708977 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.7603812606081.0'>
-<pose frame=''>0.760381260608 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can4.03.24663397088'>
+<pose frame=''>4.0 3.24663397088 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.760381260608 1.0 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>4.0 3.24663397088 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can2.50.228498740902'>
-<pose frame=''>2.5 0.228498740902 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can3.52.24932215647'>
+<pose frame=''>3.5 2.24932215647 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>2.5 0.228498740902 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>3.5 2.24932215647 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can2.262583622921.5'>
-<pose frame=''>2.26258362292 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can1.781865693363.0'>
+<pose frame=''>1.78186569336 3.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>2.26258362292 1.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>1.78186569336 3.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.01.21761077624'>
-<pose frame=''>1.0 1.21761077624 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can3.53.72851215888'>
+<pose frame=''>3.5 3.72851215888 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.0 1.21761077624 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>3.5 3.72851215888 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.7822070372660.5'>
-<pose frame=''>0.782207037266 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can3.50.732742914226'>
+<pose frame=''>3.5 0.732742914226 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.782207037266 0.5 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>3.5 0.732742914226 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.01.72993790227'>
-<pose frame=''>0.0 1.72993790227 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can3.02.23197888108'>
+<pose frame=''>3.0 2.23197888108 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.0 1.72993790227 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>3.0 2.23197888108 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.53.74518838535'>
+<pose frame=''>2.5 3.74518838535 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.5 3.74518838535 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.02.2442126031'>
+<pose frame=''>2.0 2.2442126031 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.0 2.2442126031 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.276278423610.0'>
+<pose frame=''>2.27627842361 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.27627842361 0.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.7674338174374.0'>
+<pose frame=''>0.767433817437 4.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.767433817437 4.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.265746924673.5'>
+<pose frame=''>1.26574692467 3.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.26574692467 3.5 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.2582959443091.0'>
+<pose frame=''>0.258295944309 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.258295944309 1.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can3.760547617343.5'>
+<pose frame=''>3.76054761734 3.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>3.76054761734 3.5 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.761432571560.5'>
+<pose frame=''>2.76143257156 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.76143257156 0.5 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.03.22518351173'>
+<pose frame=''>0.0 3.22518351173 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.0 3.22518351173 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.00.728182395947'>
+<pose frame=''>1.0 0.728182395947 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.0 0.728182395947 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.03.72089075938'>
+<pose frame=''>0.0 3.72089075938 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.0 3.72089075938 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.756031917793.5'>
+<pose frame=''>2.75603191779 3.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.75603191779 3.5 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.7523100060452.0'>
+<pose frame=''>0.752310006045 2.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.752310006045 2.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.52.2462422144'>
+<pose frame=''>2.5 2.2462422144 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.5 2.2462422144 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can4.00.731140912748'>
+<pose frame=''>4.0 0.731140912748 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>4.0 0.731140912748 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.764627428872.0'>
+<pose frame=''>1.76462742887 2.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.76462742887 2.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.01.72489129396'>
+<pose frame=''>0.0 1.72489129396 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.0 1.72489129396 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.2649734421413.0'>
+<pose frame=''>0.264973442141 3.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.264973442141 3.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can3.51.24790288087'>
+<pose frame=''>3.5 1.24790288087 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>3.5 1.24790288087 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can4.02.22504538569'>
+<pose frame=''>4.0 2.22504538569 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>4.0 2.22504538569 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can0.260302581631.5'>
+<pose frame=''>0.26030258163 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>0.26030258163 1.5 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.01.74434335163'>
+<pose frame=''>2.0 1.74434335163 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.0 1.74434335163 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can3.03.74824936699'>
+<pose frame=''>3.0 3.74824936699 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>3.0 3.74824936699 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.771698450141.0'>
+<pose frame=''>1.77169845014 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.77169845014 1.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.776577207821.5'>
+<pose frame=''>1.77657720782 1.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.77657720782 1.5 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.263304941044.0'>
+<pose frame=''>1.26330494104 4.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.26330494104 4.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.00.745370645394'>
+<pose frame=''>2.0 0.745370645394 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.0 0.745370645394 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can3.03.24740095483'>
+<pose frame=''>3.0 3.24740095483 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>3.0 3.24740095483 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can3.26247622883.0'>
+<pose frame=''>3.2624762288 3.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>3.2624762288 3.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can3.270180447570.0'>
+<pose frame=''>3.27018044757 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>3.27018044757 0.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can1.761358112370.0'>
+<pose frame=''>1.76135811237 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>1.76135811237 0.0 0.114998 1e-06 0 -9.5e-05</pose>
+<velocity>0 0 0 0 -0 0</velocity>
+<acceleration>0 0 -9.8 0 -0 0</acceleration>
+<wrench>0 0 -3.822 0 -0 0</wrench>
+</link>
+</model>
+<model name='can2.281773554843.5'>
+<pose frame=''>2.28177355484 3.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<scale>0.5 0.5 1</scale>
+<link name='link'>
+<pose frame=''>2.28177355484 3.5 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
 <model name='goal'>
-<pose frame=''>2.5 2.5 -9e-06 -1e-06 -4e-06 0</pose>
+<pose frame=''>4.0 4.0 -9e-06 -1e-06 -4e-06 0</pose>
 <scale>1 1 1</scale>
 <link name='goal::link'>
-<pose frame=''>2.5 2.5 0.114991 -1e-06 -4e-06 0</pose>
+<pose frame=''>4.0 4.0 0.114991 -1e-06 -4e-06 0</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -9.8 0 -0 0</wrench>
@@ -428,7 +748,7 @@
 </link>
 <static>0</static>
 <allow_auto_disable>1</allow_auto_disable>
-<pose frame=''>2.5 2.5 0 0 -0 0</pose>
+<pose frame=''>4.0 4.0 0 0 -0 0</pose>
 </model>
 <model name='wall1'>
 <static>1</static>
@@ -610,7 +930,7 @@
 </link>
 <pose frame=''>-0.779308 4.01849 0 0 -0 0</pose>
 </model>
-<model name='can2.2599051560.5'>
+<model name='can2.763880325460.0'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -673,7 +993,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can2.01.74774941416'>
+<model name='can3.53.23114141431'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -736,7 +1056,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.7736956615671.5'>
+<model name='can2.757155828741.0'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -799,7 +1119,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.51.71516789333'>
+<model name='can1.02.23399783172'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -862,7 +1182,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.50.723978224993'>
+<model name='can0.7569335521183.5'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -925,7 +1245,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can2.00.715079580462'>
+<model name='can0.7790201417580.0'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -988,7 +1308,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.51.72157806801'>
+<model name='can4.01.74792648795'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1051,7 +1371,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.52.24218483489'>
+<model name='can4.03.72649210659'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1114,7 +1434,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.267022600641.0'>
+<model name='can0.7601370374191.5'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1177,7 +1497,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.7603812606081.0'>
+<model name='can2.00.248804004108'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1240,7 +1560,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can2.50.228498740902'>
+<model name='can1.260447335320.0'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1303,7 +1623,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can2.262583622921.5'>
+<model name='can1.03.74638708977'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1366,7 +1686,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.01.21761077624'>
+<model name='can4.03.24663397088'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1429,7 +1749,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.7822070372660.5'>
+<model name='can3.52.24932215647'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1492,7 +1812,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.01.72993790227'>
+<model name='can1.781865693363.0'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1555,7 +1875,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.01.5'>
+<model name='can3.53.72851215888'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1569,6 +1889,27 @@
 <izz>0.00019</izz>
 </inertia>
 </inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
 <visual name='visual'>
 <geometry>
 <cylinder>
@@ -1597,7 +1938,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.00.5'>
+<model name='can3.50.732742914226'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1611,6 +1952,27 @@
 <izz>0.00019</izz>
 </inertia>
 </inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
 <visual name='visual'>
 <geometry>
 <cylinder>
@@ -1639,7 +2001,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.51.5'>
+<model name='can3.02.23197888108'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -1653,6 +2015,2043 @@
 <izz>0.00019</izz>
 </inertia>
 </inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.53.74518838535'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.02.2442126031'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.276278423610.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.7674338174374.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.265746924673.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.2582959443091.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can3.760547617343.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.761432571560.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.03.22518351173'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.00.728182395947'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.03.72089075938'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.756031917793.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.7523100060452.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.52.2462422144'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can4.00.731140912748'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.764627428872.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.01.72489129396'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.2649734421413.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can3.51.24790288087'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can4.02.22504538569'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can0.260302581631.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.01.74434335163'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can3.03.74824936699'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.771698450141.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.776577207821.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.263304941044.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.00.745370645394'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can3.03.24740095483'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can3.26247622883.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can3.270180447570.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can1.761358112370.0'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
+<visual name='visual'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<material>
+<script>
+<uri>model://beer/materials/scripts</uri>
+<uri>model://beer/materials/textures</uri>
+<name>Beer/Diffuse</name>
+</script>
+</material>
+</visual>
+<self_collide>0</self_collide>
+<kinematic>0</kinematic>
+<gravity>1</gravity>
+</link>
+<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
+</model>
+<gui fullscreen='0'>
+<camera name='user_camera'>
+<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
+<view_controller>orbit</view_controller>
+<projection_type>perspective</projection_type>
+</camera>
+</gui>
+<model name='can2.281773554843.5'>
+<link name='link'>
+<pose frame=''>0 0 0.115 0 -0 0</pose>
+<inertial>
+<mass>0.39</mass>
+<inertia>
+<ixx>0.00058</ixx>
+<ixy>0</ixy>
+<ixz>0</ixz>
+<iyy>0.00058</iyy>
+<iyz>0</iyz>
+<izz>0.00019</izz>
+</inertia>
+</inertial>
+<collision name='collision'>
+<geometry>
+<cylinder>
+<radius>0.055</radius>
+<length>0.23</length>
+</cylinder>
+</geometry>
+<max_contacts>10</max_contacts>
+<surface>
+<contact>
+<ode/>
+</contact>
+<bounce/>
+<friction>
+<torsional>
+<ode/>
+</torsional>
+<ode/>
+</friction>
+</surface>
+</collision>
 <visual name='visual'>
 <geometry>
 <cylinder>
