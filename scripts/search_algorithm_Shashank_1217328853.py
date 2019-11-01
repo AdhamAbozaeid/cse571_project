@@ -258,7 +258,6 @@ def astar(use_custom_heuristic):
     item = [heuristic,counter,node_cum_cost,[],root]
     heapq.heappush(frontier,item)
     counter+=1
-
     start_to_goal = []
     
     while True:
@@ -279,24 +278,15 @@ def astar(use_custom_heuristic):
                 start_to_goal.append(s)
                 s,_ = sucs[action]
             print start_to_goal
-
             return node_actions
-
 
         explored.add(str(node))
         sucs = helper.get_successor(node)
         for action in sucs:
-            #print action
             counter+=1
             actions = node_actions[:]
             child_node,child_cost = sucs[action]
-            try:
-                child_cost+=node_cum_cost
-            except TypeError:
-                print action
-                print child_cost
-                print node_cum_cost
-                raw_input()
+            child_cost+=node_cum_cost
             
             if use_custom_heuristic:
                 child_heuristic = custom_heuristic(child_node,goal_state)
@@ -320,6 +310,7 @@ def exec_action_list(action_list):
     action_list: list of actions to execute
     '''
     plan_str = '_'.join(action for action in action_list)
+    print plan_str
     publisher.publish(String(data = plan_str))
 
 

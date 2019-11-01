@@ -77,7 +77,6 @@ def handle_get_successor(req):
 	fuel_stations = mazeInfo[-1]
 	FULL_BATTERY_CAPACITY = 10
 
-	print battery
 	if battery>0:
 		action_list = ["TurnCW", "TurnCCW", "MoveB", "MoveF"]
 		
