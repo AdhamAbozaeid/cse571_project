@@ -62,8 +62,8 @@ class Maze:
 			for i in coords:
 				x, y = i
 				f_out.write('<model name=\'can{}{}\'>\n'.format(x, y))
-				f_out.write('<link name=\'link\'>\n<pose frame=\'\'>0 0 0.115 0 -0 0</pose>\n<inertial>\n<mass>0.39</mass>\n<inertia>\n<ixx>0.00058</ixx>\n<ixy>0</ixy>\n<ixz>0</ixz>\n<iyy>0.00058</iyy>\n<iyz>0</iyz>\n<izz>0.00019</izz>\n</inertia>\n</inertial>\n')
-				f_out.write('<visual name=\'visual\'>\n<geometry>\n<cylinder>\n<radius>0.055</radius>\n<length>0.23</length>\n</cylinder>\n</geometry>\n<material>\n<script>\n<uri>model://beer/materials/scripts</uri>\n<uri>model://beer/materials/textures</uri>\n<name>Beer/Diffuse</name>\n</script>\n</material>\n</visual>\n')
+				f_out.write('<static>1</static>\n<link name=\'link\'>\n<pose frame=\'\'>0 0 0.115 0 -0 0</pose>\n<inertial>\n<mass>0.39</mass>\n<inertia>\n<ixx>0.00058</ixx>\n<ixy>0</ixy>\n<ixz>0</ixz>\n<iyy>0.00058</iyy>\n<iyz>0</iyz>\n<izz>0.00019</izz>\n</inertia>\n</inertial>\n')
+				f_out.write('<visual name=\'visual\'>\n<geometry>\n<cylinder>\n<radius>0.055</radius>\n<length>0.23</length>\n</cylinder>\n</geometry>\n<material>\n<script>\n<uri>model://fuelstation/materials/scripts</uri>\n<uri>model://fuelstation/materials/textures</uri>\n<name>fuelstation/Diffuse</name>\n</script>\n</material>\n</visual>\n')
 				f_out.write('<self_collide>0</self_collide>\n<kinematic>0</kinematic>\n<gravity>1</gravity>\n</link>\n<pose frame=\'\'>0.888525 -2.58346 0 0 -0 0</pose>\n</model>\n')
 				f_out.write('<gui fullscreen=\'0\'>\n<camera name=\'user_camera\'>\n<pose frame=\'\'>5 -5 2 0 0.275643 2.35619</pose>\n<view_controller>orbit</view_controller>\n<projection_type>perspective</projection_type>\n</camera>\n</gui>\n')
 
@@ -127,7 +127,8 @@ class Maze:
 			if x == 0 and y == 0:  # do not block edges starting at origin
 				continue
 			#flag is used to decide if we want to block the edge (x, y) and (x+1, y) or (x, y) and (x, y+1) 
-			flag = np.random.randint(0, 2)
+			flag = np.random.randint(0, 3)
+                        #flag=0 for horizontal, flag=1 for vertical, flag=2 for diagonal
 			if(flag == 0 and ((x+scale) <= grid_dimension*scale) and ((x, y, x+scale, y) not in blocked_edges)):
 				blocked_edges.add((x, y, x+scale, y))
 				#Adding obstacle in the middle with some offset value of the edge to be blocked
@@ -141,6 +142,13 @@ class Maze:
 				offset = np.random.uniform(0, 0.07*scale)
 				coords.append((x, y+scale/2-offset))
 				self.add_can(f_out, x, y+scale/2-offset)
+				count += 1
+			elif(flag == 2 and ((y+scale) <= grid_dimension*scale) and ((x+scale) <= grid_dimension*scale) and ((x, y, x+scale, y+scale) not in blocked_edges)):
+				blocked_edges.add((x, y, x+scale, y+scale))
+				#Adding obstacle in the middle with some offset value of the edge to be blocked
+				offset = np.random.uniform(0, 0.07*scale)
+				coords.append((x+scale/2+offset, y+scale/2-offset))
+				self.add_can(f_out, x+scale/2+offset, y+scale/2-offset)
 				count += 1
 
 		self.add_goal(f_out, grid_dimension*0.5)
