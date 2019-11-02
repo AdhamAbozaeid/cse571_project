@@ -1,0 +1,15 @@
+material fuelstation/Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture blue_color.png
+        filtering anistropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
