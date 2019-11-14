@@ -14,6 +14,7 @@ import copy
 
 class moveTbot3:
 	def __init__(self):
+		self.model_state_publisher = rospy.Publisher("/gazebo/set_model_state",ModelState,queue_size = 10)
 		rospy.init_node('move_turtle',anonymous = True)
 		self.actions = String()
 		self.pose = Pose()
@@ -41,6 +42,17 @@ class moveTbot3:
 	def execute_next(self):
 		action = self.actions.pop(0)
 		direction = None
+		
+		if action == "REFUEL":
+			#add changing color of fuel can
+			print "Recharged!"
+			current_pose = self.pose
+			quat = (current_pose.orientation.x,current_pose.orientation.y,current_pose.orientation.z,current_pose.orientation.w)
+			euler = tf.transformations.euler_from_quaternion(quat)
+			current_yaw = euler[2]
+			PID(current_pose,"linear").publish_velocity()
+
+		
 		if action == "MoveF" or action == "MoveB":
 			current_pose = self.pose
 			quat = (current_pose.orientation.x,current_pose.orientation.y,current_pose.orientation.z,current_pose.orientation.w)
