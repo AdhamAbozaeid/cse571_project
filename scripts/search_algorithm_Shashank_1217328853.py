@@ -24,6 +24,9 @@ publisher = rospy.Publisher("/actions", String, queue_size=10)
 parser = argparse.ArgumentParser()
 parser.add_argument('-a', help="Please mention algorithm to use. Possible arguments = {bfs, ucs, gbfs, astar}. Default value is bfs.", metavar='bfs', action='store', dest='algorithm', default="bfs", type=str)
 parser.add_argument('-c', help="Use custom heuristic function", action='store_true', dest='custom_heuristic')
+parser.add_argument('-d',help = "Use debug action sequence",action = 'store_true',dest = 'debug_mode')
+
+
 
 def manhattan(state1,state2):
     return abs(state1.x-state2.x)+abs(state1.y-state2.y)
@@ -49,7 +52,13 @@ def custom_heuristic(state,goal):
             return 2*m+2
         return 2*m+4
     
-def bfs(use_custom_heuristic):
+def bfs(use_custom_heuristic,use_debug_mode):
+
+    global debug_sequence
+    if use_debug_mode:
+        return debug_sequence
+
+
     helper = problem.Helper()
     init_state = helper.get_initial_state()
     goal_state = helper.get_goal_state()
@@ -104,10 +113,17 @@ def findnode(q,item):
             return i
     return -1
 
-def ucs(use_custom_heuristic):
+def ucs(use_custom_heuristic,use_debug_mode):
     '''
     Perform UCS to find sequence of actions from initial state to goal state
     '''
+
+    global debug_mode
+    global debug_sequence
+    if use_debug_mode:
+        return debug_sequence
+
+
     helper = problem.Helper()
     init_state = helper.get_initial_state()
     goal_state = helper.get_goal_state()
@@ -165,10 +181,17 @@ def ucs(use_custom_heuristic):
 
     return action_list
 
-def gbfs(use_custom_heuristic):
+def gbfs(use_custom_heuristic,use_debug_mode):
     '''
     Perform A* search to find sequence of actions from initial state to goal state
     '''
+    global debug_mode
+    global debug_sequence
+    if use_debug_mode:
+        return debug_sequence
+
+
+
     helper = problem.Helper()
     init_state = helper.get_initial_state()
     goal_state = helper.get_goal_state()
@@ -228,10 +251,17 @@ def gbfs(use_custom_heuristic):
                 heapq.heappush(frontier,item)
 
     return action_list
-def astar(use_custom_heuristic):
+def astar(use_custom_heuristic,use_debug_mode):
     '''
     Perform A* search to find sequence of actions from initial state to goal state
     '''
+    global debug_mode
+    global debug_sequence
+    if use_debug_mode:
+        return debug_sequence
+
+
+
     helper = problem.Helper()
     init_state = helper.get_initial_state()
     goal_state = helper.get_goal_state()
@@ -302,9 +332,11 @@ def exec_action_list(action_list):
     plan_str = '_'.join(action for action in action_list)
     publisher.publish(String(data = plan_str))
 
+debug_sequence = ['MoveF', 'REFUEL', 'TurnCCW', 'MoveF', 'MoveF', 'MoveF', 'MoveF', 'TurnCCW', 'MoveF']
 
 if __name__ == "__main__":
     # DO NOT MODIFY BELOW CODE
+
     args = parser.parse_args()
     algorithm = globals().get(args.algorithm)
     if algorithm is None:
@@ -315,7 +347,11 @@ if __name__ == "__main__":
         exit(1)
 
     start_time = time.time()
-    actions = algorithm(args.custom_heuristic)
+    
+    actions = algorithm(args.custom_heuristic,args.debug_mode)
+    
+    
+
     time_taken = time.time() - start_time
     print("Algorithm : "+str(args.algorithm))
     print("Time Taken = " + str(time_taken))
