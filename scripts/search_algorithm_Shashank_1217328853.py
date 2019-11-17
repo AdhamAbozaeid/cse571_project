@@ -31,6 +31,18 @@ parser.add_argument('-d',help = "Use debug action sequence",action = 'store_true
 def manhattan(state1,state2):
     return abs(state1.x-state2.x)+abs(state1.y-state2.y)
 
+import numpy as np
+def custom_heuristic2(state,goal):
+    # use square of euclidian distance for efficiency
+    eucl_dist_sqr = (((state.x - goal.x)**2) + ((state.y - goal.y)**2))
+    # Penalize if the battery isn't enough to reach the goal
+    # Number of steps is at minimum the euclidian distance / 0.5sqrt(2)
+    # To avoid sqrt, square everything, euclidian_distance
+    no_steps_sqr = 2*eucl_dist_sqr
+    if no_steps_sqr > (state.battery**2):
+        return eucl_dist_sqr + 1000
+    return eucl_dist_sqr
+
 def custom_heuristic(state,goal):
     if state.x == state.y:
         return 0
@@ -212,7 +224,7 @@ def gbfs(use_custom_heuristic,use_debug_mode):
     explored = set()
 
     if use_custom_heuristic:
-        heuristic = custom_heuristic(root,goal_state)
+        heuristic = custom_heuristic2(root,goal_state)
     else:
         heuristic = manhattan(root,goal_state)
 
@@ -241,7 +253,7 @@ def gbfs(use_custom_heuristic,use_debug_mode):
             child_node,child_cost = sucs[action]
             
             if use_custom_heuristic:
-                child_heuristic = custom_heuristic(child_node,goal_state)
+                child_heuristic = custom_heuristic2(child_node,goal_state)
             else:   
                 child_heuristic = manhattan(child_node,goal_state)
 
@@ -281,9 +293,10 @@ def astar(use_custom_heuristic,use_debug_mode):
     explored = set()
     
     if use_custom_heuristic:
-        heuristic = custom_heuristic(root,goal_state)
+        heuristic = custom_heuristic2(root,goal_state)
     else:
         heuristic = manhattan(root,goal_state)
+
     node_cum_cost = 0.0
     item = [heuristic,counter,node_cum_cost,[],root]
     heapq.heappush(frontier,item)
@@ -311,7 +324,7 @@ def astar(use_custom_heuristic,use_debug_mode):
             child_cost+=node_cum_cost
             
             if use_custom_heuristic:
-                child_heuristic = custom_heuristic(child_node,goal_state)
+                child_heuristic = custom_heuristic2(child_node,goal_state)
             else:
                 child_heuristic = manhattan(child_node,goal_state)
 
