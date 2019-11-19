@@ -9,7 +9,7 @@ from geometry_msgs.msg import Pose
 import tf
 from gazebo_msgs.msg import ModelState
 from geometry_msgs.msg import Quaternion
-from pid import PID
+from pid_pro import PID
 import copy
 
 class moveTbot3:
