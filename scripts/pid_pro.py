@@ -33,7 +33,7 @@ class PID(object):
 		
 		self.KP = 1.0
 		self.KD = 1.5
-		self.KI = 2.0
+		self.KI = 3.5
 		self.KP_rot = 5.0
 		self.KD_rot = 100.0
 		self.KI_rot = 10.0
