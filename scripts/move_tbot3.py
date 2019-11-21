@@ -119,7 +119,7 @@ class moveTbot3:
 				print "Case 1 : East"
 				#raw_input()
 				target_pose = copy.deepcopy(current_pose)
-				target_pose.position.x -= - 0.5
+				target_pose.position.x -= 0.5
 				#direction = 'x'
 				#incr y co-ordinate
 			elif current_yaw > (math.pi / 8.0 ) and current_yaw < (3.0 * math.pi / 8.0):

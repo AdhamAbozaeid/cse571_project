@@ -102,13 +102,13 @@ def handle_get_successor(req):
 
 		elif action == 'TurnCW':
 			index = direction_list.index(req.orientation)
-			direction = direction_list[(index+1)%len(action_list)]
+			direction = direction_list[(index+1)%len(direction_list)]
 			g_cost = 2
 			battery-=1
 
 		elif action == 'TurnCCW':
 			index = direction_list.index(req.orientation)
-			direction = direction_list[(index-1)%len(action_list)]
+			direction = direction_list[(index-1)%len(direction_list)]
 			g_cost = 2
 			battery-=1
 
@@ -135,11 +135,14 @@ def handle_get_successor(req):
 				x_cord += 0.5
 			g_cost = 3
 			battery-=1
-
 		if req.x <= x_cord and req.y <= y_cord:
 			isValidEdge = check_is_edge((req.x, req.y, x_cord, y_cord), "changedValuesLater")
-		else:
+		elif req.x > x_cord and req.y > y_cord:
 			isValidEdge = check_is_edge((x_cord, y_cord, req.x, req.y), "changedValuesBefore")
+		elif req.x < x_cord and req.y > y_cord:
+			isValidEdge = check_is_edge((x_cord, y_cord, req.x, req.y), "changedValuesBefore")
+		elif req.x > x_cord and req.y < y_cord:
+			isValidEdge = check_is_edge((req.x, req.y, x_cord, y_cord), "changedValuesLater")
 
 		if not isValidEdge:
 			state_x.append(-1)
