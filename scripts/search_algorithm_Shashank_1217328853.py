@@ -34,11 +34,10 @@ def manhattan(state1,state2):
 import numpy as np
 def custom_heuristic2(state,goal):
     # use square of euclidian distance for efficiency
-    eucl_dist_sqr = (((state.x - goal.x)**2) + ((state.y - goal.y)**2))
+    eucl_dist_sqr = math.sqrt(((state.x - goal.x)**2) + ((state.y - goal.y)**2))
     # Penalize if the battery isn't enough to reach the goal
     # Number of steps is at minimum the euclidian distance / 0.5sqrt(2)
-    # To avoid sqrt, square everything, euclidian_distance
-    no_steps_sqr = 2*eucl_dist_sqr
+    no_steps_sqr = eucl_dist_sqr/0.707
     if no_steps_sqr > (state.battery**2):
         return eucl_dist_sqr + 1000
     return eucl_dist_sqr
