@@ -19,7 +19,7 @@ import time
 import numpy as np
 from gazebo_msgs.srv import SpawnModel
 from geometry_msgs.msg import Pose
-
+import copy
 
 mazeInfo = None
 parser = argparse.ArgumentParser()
@@ -200,7 +200,7 @@ def handle_is_goal_state(req):
     This function will return True if turtlebot3 is at goal state otherwise it will return False.
 	"""
 	global mazeInfo,goal_location
-	goal_state = np.dot(goal_location,0.5)
+	goal_state = copy.deepcopy(goal_location)
 	if req.x == goal_state[0] and req.y == goal_state[1]:
 		return IsGoalStateResponse(1)
 
@@ -208,7 +208,7 @@ def handle_is_goal_state(req):
 
 def handle_get_goal_state(req):
 	global mazeInfo,goal_location
-	goal_state = np.dot(goal_location,0.5)
+	goal_state = copy.deepcopy(goal_location)
 	return GetGoalStateResponse(goal_state[0],goal_state[1])
 
 def handle_get_actions(req):
@@ -252,7 +252,7 @@ if __name__ == "__main__":
     if goal_location == [0,0]: #default value
     	goal_location = [args.grid_dimension*scale,args.grid_dimension*scale]
     else:
-    	goal_location = [goal_location[0]*scale,goal_location[1]*scale]
+    	goal_location = [goal_location[0],goal_location[1]]
 
     num_fuel_stations = args.num_fuel_stations
     server()	
