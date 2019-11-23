@@ -168,6 +168,7 @@ class moveTbot3:
 			PID(target_pose,"linear").publish_velocity()
 
 		elif action == "TurnCW" or action == "TurnCCW":
+			print "Case: Turning"
 			current_pose = self.pose
 			quat = (current_pose.orientation.x,current_pose.orientation.y,current_pose.orientation.z,current_pose.orientation.w)
 			euler = tf.transformations.euler_from_quaternion(quat)

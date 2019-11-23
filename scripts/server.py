@@ -31,8 +31,6 @@ parser.add_argument('-b', help ='for providing initial battery level', metavar='
 
 def spawn_can(posx, posy,i_d,goal=0):
     parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
-    print("!!!!YO")
-
     if goal:
     	f_read = open(os.path.expanduser("~") + "/.gazebo/models/beer/model2.sdf",'r')
     else:	
@@ -255,4 +253,8 @@ if __name__ == "__main__":
     	goal_location = [goal_location[0],goal_location[1]]
 
     num_fuel_stations = args.num_fuel_stations
+  	
+  	fpub = rospy.Publisher('/fuel_stations',String,queue_size=10)
+  	fpub.publish(str(mazeInfo[-1]))
+  	
     server()	
