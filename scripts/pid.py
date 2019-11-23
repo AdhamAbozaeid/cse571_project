@@ -165,10 +165,6 @@ class PID(object):
 			self.p_error_angular_z_rot_last = self.p_error_angular_z_rot
 
 			return (self.max_rot_angular * self.KP_rot_angular * self.p_error_angular_z_rot) + (self.KD_rot_angular * self.max_rot_angular * self.d_error_angular_z_rot)
-
-		
-			
-
 		
 
 	def publish_velocity(self):
