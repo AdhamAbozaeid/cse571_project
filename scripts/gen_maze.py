@@ -126,6 +126,7 @@ class Maze:
 
 		count = 1
 		np.random.seed(seed)
+
 		while(count <= n_obstacles):
 			x = scale*np.random.randint(0, grid_dimension+1)
 			y = scale*np.random.randint(0, grid_dimension+1)

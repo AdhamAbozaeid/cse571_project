@@ -232,10 +232,11 @@ if __name__ == "__main__":
     	print('Maximum no. of obstacles that could be added to the grid is {} but provided value is {}'.format(possible_n_obstacles, args.n_obstacles))
     	exit()
     my_maze = Maze()
-    
     '''
 	Pass goal location to generate_maze
     '''
+    mazeInfo = my_maze.generate_maze(args.grid_dimension, args.n_obstacles, args.seed,args.num_fuel_stations,battery = args.battery_input_value)
+    
     goal_x = 0
     goal_y = 0
     print("Enter Goal X position Eg:1.5, please use only numbers in steps of 0.5 within the grid dimension!")
@@ -243,7 +244,6 @@ if __name__ == "__main__":
     print("Enter Goal Y position Eg:1.5, please use only numbers in steps of 0.5 within the grid dimension!")
     goal_y = input()
     scale = 0.5
-
     spawn_can(goal_x,goal_y,0,1)
     goal_location = [goal_x,goal_y]
     if goal_location[0]>args.grid_dimension or goal_location[1]>args.grid_dimension:
@@ -254,6 +254,5 @@ if __name__ == "__main__":
     else:
     	goal_location = [goal_location[0]*scale,goal_location[1]*scale]
 
-    mazeInfo = my_maze.generate_maze(args.grid_dimension, args.n_obstacles, args.seed,args.num_fuel_stations,battery = args.battery_input_value)
     num_fuel_stations = args.num_fuel_stations
     server()	
