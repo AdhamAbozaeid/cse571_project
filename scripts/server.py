@@ -20,6 +20,7 @@ import numpy as np
 from gazebo_msgs.srv import SpawnModel
 from geometry_msgs.msg import Pose
 import copy
+from std_msgs.msg import String
 
 mazeInfo = None
 parser = argparse.ArgumentParser()
@@ -92,7 +93,7 @@ def handle_get_successor(req):
 	state_battery = []
 	x_cord, y_cord, direction,battery = req.x, req.y, req.orientation,req.battery
 	nearby_clearance = 0.1
-	refueling_cost = 1
+	refueling_cost = 1000
 	fuel_stations = mazeInfo[-1]
 	FULL_BATTERY_CAPACITY = 10
 
@@ -219,11 +220,11 @@ def server():
     rospy.Service('is_goal_state', IsGoalState, handle_is_goal_state)
     rospy.Service('get_goal_state',GetGoalState,handle_get_goal_state)
     rospy.Service('get_all_actions',GetActions,handle_get_actions)
-
     print "Ready!"
     rospy.spin()
 
 if __name__ == "__main__":
+
     args = parser.parse_args()
     possible_n_obstacles =  args.grid_dimension*(args.grid_dimension + 1)*2
     if args.n_obstacles > possible_n_obstacles:
@@ -254,7 +255,6 @@ if __name__ == "__main__":
 
     num_fuel_stations = args.num_fuel_stations
   	
-  	fpub = rospy.Publisher('/fuel_stations',String,queue_size=10)
-  	fpub.publish(str(mazeInfo[-1]))
+
   	
     server()	

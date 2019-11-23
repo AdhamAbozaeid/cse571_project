@@ -11,6 +11,8 @@ from gazebo_msgs.msg import ModelState
 from geometry_msgs.msg import Quaternion
 from pid_pro import PID
 import copy
+import os,sys
+from gazebo_msgs.srv import SpawnModel
 
 class moveTbot3:
 	def __init__(self):
@@ -27,6 +29,20 @@ class moveTbot3:
 		self.rate = rospy.Rate(30)
 		print "Ready!"
 		rospy.spin()
+
+	def spawn_can(self,posx, posy):
+	    global i_d
+	    i_d+=1
+	    f_read = open(os.path.expanduser("~") + "/.gazebo/models/fuelstation/model-2.sdf",'r')
+	    sdff = f_read.read()
+	    f_read.close()
+	    rospy.wait_for_service('gazebo/spawn_sdf_model')
+	    spawn_model_prox = rospy.ServiceProxy('gazebo/spawn_sdf_model', SpawnModel)
+	    pose = Pose()
+	    pose.position.x = posx
+	    pose.position.y = posy
+	    pose.position.z = 0
+	    spawn_model_prox("fuelstat{}".format(i_d), sdff, "robots_name_space", pose, "world")
 
 	def callback_pid(self,data):
 		if data.data == "Done":
@@ -50,7 +66,19 @@ class moveTbot3:
 			quat = (current_pose.orientation.x,current_pose.orientation.y,current_pose.orientation.z,current_pose.orientation.w)
 			euler = tf.transformations.euler_from_quaternion(quat)
 			current_yaw = euler[2]
+			
+			'''
+			approx pos to nearest 0.5
+			'''
+			fuel_can_pose_x = round(current_pose.position.x*2.0)/2
+			fuel_can_pose_y = round(current_pose.position.y*2.0)/2
+			print("HELLLOOOO")
+			self.spawn_can(fuel_can_pose_x,fuel_can_pose_y)
+
 			PID(current_pose,"linear").publish_velocity()
+
+
+
 
 		
 		elif action == "MoveF":
@@ -201,6 +229,7 @@ class moveTbot3:
 	
 
 if __name__ == "__main__":
+	i_d = 100
 	try:
 		moveTbot3()
 	except rospy.ROSInterruptException:
