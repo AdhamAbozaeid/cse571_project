@@ -13,10 +13,12 @@ __docformat__ = 'reStructuredText'
 from cse571_project.srv import *
 import rospy
 from gen_maze import *
-import sys
+import os, sys
 import argparse
 import time
 import numpy as np
+from gazebo_msgs.srv import SpawnModel
+from geometry_msgs.msg import Pose
 
 
 mazeInfo = None
@@ -26,6 +28,25 @@ parser.add_argument('-n', help='for providing no. of obstacles to be added in th
 parser.add_argument('-s', help='for providing random seed', metavar='32', action='store', dest='seed', default=int(time.time()), type=int)
 parser.add_argument('-f', help='for providing no. of fuel stations', metavar='3', action='store', dest='num_fuel_stations', default=3, type=int)
 parser.add_argument('-b', help ='for providing initial battery level', metavar='15', action='store', dest='battery_input_value', default=10, type=int)
+
+def spawn_can(posx, posy,i_d,goal=0):
+    parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
+    print("!!!!YO")
+
+    if goal:
+    	f_read = open(os.path.expanduser("~") + "/.gazebo/models/beer/model2.sdf",'r')
+    else:	
+    	f_read = open(os.path.expanduser("~") + "/.gazebo/models/fuelstation/model-1_4.sdf",'r')
+
+    sdff = f_read.read()
+    f_read.close()
+    rospy.wait_for_service('gazebo/spawn_sdf_model')
+    spawn_model_prox = rospy.ServiceProxy('gazebo/spawn_sdf_model', SpawnModel)
+    pose = Pose()
+    pose.position.x = posx
+    pose.position.y = posy
+    pose.position.z = 0
+    spawn_model_prox("fuelstat{}".format(i_d), sdff, "robots_name_space", pose, "world")
 
 
 def manhattanDistance(x1, y1, x2, y2):
@@ -88,7 +109,6 @@ def handle_get_successor(req):
 			print("Robot is near fuelling station!")
 			action_list.append("REFUEL")
 			break
-
 
 
 	for action in action_list:
@@ -176,17 +196,17 @@ def handle_is_goal_state(req):
 	"""
     This function will return True if turtlebot3 is at goal state otherwise it will return False.
 	"""
-	global mazeInfo
-	goal_state = mazeInfo[0][1]*0.5
-	if req.x == req.y and req.x == goal_state:
+	global mazeInfo,goal_location
+	goal_state = np.dot(goal_location,0.5)
+	if req.x == goal_state[0] and req.y == goal_state[1]:
 		return IsGoalStateResponse(1)
 
 	return IsGoalStateResponse(0)
 
 def handle_get_goal_state(req):
-	global mazeInfo
-	goal_state = mazeInfo[0][1]*0.5
-	return GetGoalStateResponse(goal_state,goal_state)
+	global mazeInfo,goal_location
+	goal_state = np.dot(goal_location,0.5)
+	return GetGoalStateResponse(goal_state[0],goal_state[1])
 
 def handle_get_actions(req):
 	return "TurnCW,TurnCCW,MoveB,MoveF,REFUEL"
@@ -209,6 +229,28 @@ if __name__ == "__main__":
     	print('Maximum no. of obstacles that could be added to the grid is {} but provided value is {}'.format(possible_n_obstacles, args.n_obstacles))
     	exit()
     my_maze = Maze()
+    
+    '''
+	Pass goal location to generate_maze
+    '''
+    goal_x = 0
+    goal_y = 0
+    print("Enter Goal X position Eg:1.5, please use only numbers in steps of 0.5 within the grid dimension!")
+    goal_x = input()
+    print("Enter Goal Y position Eg:1.5, please use only numbers in steps of 0.5 within the grid dimension!")
+    goal_y = input()
+    scale = 0.5
+
+    spawn_can(goal_x,goal_y,0,1)
+    goal_location = [goal_x,goal_y]
+    if goal_location[0]>args.grid_dimension or goal_location[1]>args.grid_dimension:
+    	print("Invalid goal location! Please try again!")
+    	exit()
+    if goal_location == [0,0]: #default value
+    	goal_location = [args.grid_dimension*scale,args.grid_dimension*scale]
+    else:
+    	goal_location = [goal_location[0]*scale,goal_location[1]*scale]
+
     mazeInfo = my_maze.generate_maze(args.grid_dimension, args.n_obstacles, args.seed,args.num_fuel_stations,battery = args.battery_input_value)
     num_fuel_stations = args.num_fuel_stations
     server()	

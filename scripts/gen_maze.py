@@ -12,6 +12,7 @@ __docformat__ = 'reStructuredText'
 
 import numpy as np
 import os, sys
+import pprint
 class Maze:
 
 	def copy_empty_world(self):
@@ -90,18 +91,22 @@ class Maze:
 		f_out.write('<collide_bitmask>1</collide_bitmask>\n<ode>\n<soft_cfm>0</soft_cfm>\n<soft_erp>0.2</soft_erp>\n<kp>1e+13</kp>\n<kd>1</kd>\n<max_vel>0.01</max_vel>\n<min_depth>0</min_depth>\n</ode>\n')
 		f_out.write('<bullet>\n<split_impulse>1</split_impulse>\n<split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>\n<soft_cfm>0</soft_cfm>\n<soft_erp>0.2</soft_erp>\n<kp>1e+13</kp>\n')
 		f_out.write('<kd>1</kd>\n</bullet>\n</contact>\n</surface>\n</collision>\n</link>\n<static>0</static>\n<allow_auto_disable>1</allow_auto_disable>\n')
-		f_out.write('<pose frame=\'\'>{} {} 0 0 -0 0</pose>\n</model>\n'.format(coord, coord))
+		f_out.write('<pose frame=\'\'>{} {} 0 0 -0 0</pose>\n</model>\n'.format(coord[0], coord[1]))
 
 	#Method to place the goal can
 	def add_goal(self, f_out, coord):
 		f_out.write('<model name=\'goal\'>\n')
-		f_out.write('<pose frame=\'\'>{} {} -9e-06 -1e-06 -4e-06 0</pose>\n'.format(coord, coord))
+		f_out.write('<pose frame=\'\'>{} {} -9e-06 -1e-06 -4e-06 0</pose>\n'.format(coord[0], coord[1]))
 		f_out.write('<scale>1 1 1</scale>\n<link name=\'goal::link\'>\n')
-		f_out.write('<pose frame=\'\'>{} {} 0.114991 -1e-06 -4e-06 0</pose>\n'.format(coord, coord))
+		f_out.write('<pose frame=\'\'>{} {} 0.114991 -1e-06 -4e-06 0</pose>\n'.format(coord[0], coord[1]))
 		f_out.write('<velocity>0 0 0 0 -0 0</velocity>\n<acceleration>0 0 -9.8 0 -0 0</acceleration>\n<wrench>0 0 -9.8 0 -0 0</wrench>\n</link>\n</model>\n')
 
 	#Method to generate maze
 	def generate_maze(self, grid_dimension, n_obstacles, seed, num_fuel_stations = 3, battery = 10, scale=0.5):
+		'''
+		place cans at new goal_location
+
+		'''
 		blocked_edges = set()
 		fuel_stations = []
 		coords = []
@@ -145,15 +150,16 @@ class Maze:
 				count += 1
 			elif(flag == 2 and ((y+scale) <= grid_dimension*scale) and ((x+scale) <= grid_dimension*scale) and ((x, y, x+scale, y+scale) not in blocked_edges)):
 				blocked_edges.add((x, y, x+scale, y+scale))
+				blocked_edges.add((x+scale,y,x,y+scale))
 				#Adding obstacle in the middle with some offset value of the edge to be blocked
 				offset = np.random.uniform(0, 0.07*scale)
 				coords.append((x+scale/2+offset, y+scale/2-offset))
 				self.add_can(f_out, x+scale/2+offset, y+scale/2-offset)
 				count += 1
 
-		self.add_goal(f_out, grid_dimension*0.5)
+		#self.add_goal(f_out, goal_location)
 		f_out.write('</state>')
-		self.add_goal_description(f_out, grid_dimension*0.5)
+		#self.add_goal_description(f_out, goal_location)
 		self.add_walls_description(f_out)
 		self.add_can_description(f_out,coords)
 		
@@ -162,8 +168,15 @@ class Maze:
 
 		f_out.write('</world>\n</sdf>')
 		f_out.close()
+		#print(f_out)
+		#raw_input()
 		print "fuel stations:" + str(fuel_stations)
 		#print "obstacles:" + str(coords)
 		maze = [(0, grid_dimension, 'EAST', battery, scale), blocked_edges, fuel_stations]
+		
+		pp = pprint.PrettyPrinter(indent=4)
+
+		pp.pprint(blocked_edges)
+		#raw_input()
 		#print "number of blocked edges = " + str(len(blocked_edges))
 		return maze
