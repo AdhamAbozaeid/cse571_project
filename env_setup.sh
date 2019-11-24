@@ -12,5 +12,3 @@ cd ~/catkin_ws && catkin_make
 
 # source latest
 source ~/catkin_ws/devel/setup.bash
-
-cp -r ./helpers/models/custom_sdf/model2.sdf ~/.gazebo/models/beer

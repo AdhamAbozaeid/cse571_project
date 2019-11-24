@@ -13,3 +13,20 @@ material fuelstation/Diffuse
     }
   }
 }
+
+
+material fuelstation2/Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture green_color.png
+        filtering anistropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
