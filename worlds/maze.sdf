@@ -138,61 +138,61 @@
 <wrench>0 0 0 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.51.0'>
-<pose frame=''>0.5 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.50.0'>
+<pose frame=''>0.5 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.5 1.0 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.5 0.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.00.0'>
-<pose frame=''>1.0 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.50.5'>
+<pose frame=''>0.5 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.0 0.0 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.5 0.5 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.50.233197099488'>
-<pose frame=''>0.5 0.233197099488 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can1.00.229683648323'>
+<pose frame=''>1.0 0.229683648323 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.5 0.233197099488 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>1.0 0.229683648323 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.7732547704771.0'>
-<pose frame=''>0.773254770477 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.7657376932110.5'>
+<pose frame=''>0.765737693211 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.773254770477 1.0 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.765737693211 0.5 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.00.739576811537'>
-<pose frame=''>0.0 0.739576811537 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.00.721448990861'>
+<pose frame=''>0.0 0.721448990861 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.0 0.739576811537 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.0 0.721448990861 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.50.749074022083'>
-<pose frame=''>0.5 0.749074022083 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.50.24102966717'>
+<pose frame=''>0.5 0.24102966717 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.5 0.749074022083 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.5 0.24102966717 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
@@ -378,7 +378,7 @@
 </link>
 <pose frame=''>-0.779308 4.01849 0 0 -0 0</pose>
 </model>
-<model name='can0.50.233197099488'>
+<model name='can1.00.229683648323'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -441,7 +441,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.7732547704771.0'>
+<model name='can0.7657376932110.5'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -504,7 +504,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.00.739576811537'>
+<model name='can0.00.721448990861'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -567,7 +567,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.50.749074022083'>
+<model name='can0.50.24102966717'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -630,7 +630,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.51.0'>
+<model name='can0.50.0'>
 <static>1</static>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
@@ -673,7 +673,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can1.00.0'>
+<model name='can0.50.5'>
 <static>1</static>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
