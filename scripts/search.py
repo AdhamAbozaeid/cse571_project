@@ -27,7 +27,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-a', help="Please mention algorithm to use. Possible arguments = {bfs, ucs, gbfs, astar}. Default value is bfs.", metavar='bfs', action='store', dest='algorithm', default="bfs", type=str)
 parser.add_argument('-c', help="Use custom heuristic function", action='store_true', dest='custom_heuristic')
 parser.add_argument('-d',help = "Use debug action sequence",action = 'store_true',dest = 'debug_mode')
-parser.add_argument('-s',help = "print states",action='store',default=1,type=int,dest = 'states')
+parser.add_argument('-s',help = "print states",action='store',default=1,type=int,dest = 'print_states')
 pp = pprint.PrettyPrinter(indent=4)
 
 def states_from_action_list(action_list):
@@ -338,6 +338,7 @@ def exec_action_list(action_list):
     action_list: list of actions to execute
     '''
     global print_state_path
+
     if print_state_path!=0:
         states_from_action_list(action_list)
 
