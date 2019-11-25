@@ -138,16 +138,6 @@
 <wrench>0 0 0 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.50.0'>
-<pose frame=''>0.5 0.0 -2e-06 1e-06 0 -9.5e-05</pose>
-<scale>0.5 0.5 1</scale>
-<link name='link'>
-<pose frame=''>0.5 0.0 0.114998 1e-06 0 -9.5e-05</pose>
-<velocity>0 0 0 0 -0 0</velocity>
-<acceleration>0 0 -9.8 0 -0 0</acceleration>
-<wrench>0 0 -3.822 0 -0 0</wrench>
-</link>
-</model>
 <model name='can0.50.5'>
 <pose frame=''>0.5 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
@@ -158,41 +148,21 @@
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can1.00.229683648323'>
-<pose frame=''>1.0 0.229683648323 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.2831030856881.0'>
+<pose frame=''>0.283103085688 1.0 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>1.0 0.229683648323 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.283103085688 1.0 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
 </link>
 </model>
-<model name='can0.7657376932110.5'>
-<pose frame=''>0.765737693211 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
+<model name='can0.2798655571710.5'>
+<pose frame=''>0.279865557171 0.5 -2e-06 1e-06 0 -9.5e-05</pose>
 <scale>0.5 0.5 1</scale>
 <link name='link'>
-<pose frame=''>0.765737693211 0.5 0.114998 1e-06 0 -9.5e-05</pose>
-<velocity>0 0 0 0 -0 0</velocity>
-<acceleration>0 0 -9.8 0 -0 0</acceleration>
-<wrench>0 0 -3.822 0 -0 0</wrench>
-</link>
-</model>
-<model name='can0.00.721448990861'>
-<pose frame=''>0.0 0.721448990861 -2e-06 1e-06 0 -9.5e-05</pose>
-<scale>0.5 0.5 1</scale>
-<link name='link'>
-<pose frame=''>0.0 0.721448990861 0.114998 1e-06 0 -9.5e-05</pose>
-<velocity>0 0 0 0 -0 0</velocity>
-<acceleration>0 0 -9.8 0 -0 0</acceleration>
-<wrench>0 0 -3.822 0 -0 0</wrench>
-</link>
-</model>
-<model name='can0.50.24102966717'>
-<pose frame=''>0.5 0.24102966717 -2e-06 1e-06 0 -9.5e-05</pose>
-<scale>0.5 0.5 1</scale>
-<link name='link'>
-<pose frame=''>0.5 0.24102966717 0.114998 1e-06 0 -9.5e-05</pose>
+<pose frame=''>0.279865557171 0.5 0.114998 1e-06 0 -9.5e-05</pose>
 <velocity>0 0 0 0 -0 0</velocity>
 <acceleration>0 0 -9.8 0 -0 0</acceleration>
 <wrench>0 0 -3.822 0 -0 0</wrench>
@@ -378,7 +348,7 @@
 </link>
 <pose frame=''>-0.779308 4.01849 0 0 -0 0</pose>
 </model>
-<model name='can1.00.229683648323'>
+<model name='can0.2831030856881.0'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -441,7 +411,7 @@
 <projection_type>perspective</projection_type>
 </camera>
 </gui>
-<model name='can0.7657376932110.5'>
+<model name='can0.2798655571710.5'>
 <link name='link'>
 <pose frame=''>0 0 0.115 0 -0 0</pose>
 <inertial>
@@ -488,175 +458,6 @@
 <uri>model://beer/materials/scripts</uri>
 <uri>model://beer/materials/textures</uri>
 <name>Beer/Diffuse</name>
-</script>
-</material>
-</visual>
-<self_collide>0</self_collide>
-<kinematic>0</kinematic>
-<gravity>1</gravity>
-</link>
-<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
-</model>
-<gui fullscreen='0'>
-<camera name='user_camera'>
-<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
-<view_controller>orbit</view_controller>
-<projection_type>perspective</projection_type>
-</camera>
-</gui>
-<model name='can0.00.721448990861'>
-<link name='link'>
-<pose frame=''>0 0 0.115 0 -0 0</pose>
-<inertial>
-<mass>0.39</mass>
-<inertia>
-<ixx>0.00058</ixx>
-<ixy>0</ixy>
-<ixz>0</ixz>
-<iyy>0.00058</iyy>
-<iyz>0</iyz>
-<izz>0.00019</izz>
-</inertia>
-</inertial>
-<collision name='collision'>
-<geometry>
-<cylinder>
-<radius>0.055</radius>
-<length>0.23</length>
-</cylinder>
-</geometry>
-<max_contacts>10</max_contacts>
-<surface>
-<contact>
-<ode/>
-</contact>
-<bounce/>
-<friction>
-<torsional>
-<ode/>
-</torsional>
-<ode/>
-</friction>
-</surface>
-</collision>
-<visual name='visual'>
-<geometry>
-<cylinder>
-<radius>0.055</radius>
-<length>0.23</length>
-</cylinder>
-</geometry>
-<material>
-<script>
-<uri>model://beer/materials/scripts</uri>
-<uri>model://beer/materials/textures</uri>
-<name>Beer/Diffuse</name>
-</script>
-</material>
-</visual>
-<self_collide>0</self_collide>
-<kinematic>0</kinematic>
-<gravity>1</gravity>
-</link>
-<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
-</model>
-<gui fullscreen='0'>
-<camera name='user_camera'>
-<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
-<view_controller>orbit</view_controller>
-<projection_type>perspective</projection_type>
-</camera>
-</gui>
-<model name='can0.50.24102966717'>
-<link name='link'>
-<pose frame=''>0 0 0.115 0 -0 0</pose>
-<inertial>
-<mass>0.39</mass>
-<inertia>
-<ixx>0.00058</ixx>
-<ixy>0</ixy>
-<ixz>0</ixz>
-<iyy>0.00058</iyy>
-<iyz>0</iyz>
-<izz>0.00019</izz>
-</inertia>
-</inertial>
-<collision name='collision'>
-<geometry>
-<cylinder>
-<radius>0.055</radius>
-<length>0.23</length>
-</cylinder>
-</geometry>
-<max_contacts>10</max_contacts>
-<surface>
-<contact>
-<ode/>
-</contact>
-<bounce/>
-<friction>
-<torsional>
-<ode/>
-</torsional>
-<ode/>
-</friction>
-</surface>
-</collision>
-<visual name='visual'>
-<geometry>
-<cylinder>
-<radius>0.055</radius>
-<length>0.23</length>
-</cylinder>
-</geometry>
-<material>
-<script>
-<uri>model://beer/materials/scripts</uri>
-<uri>model://beer/materials/textures</uri>
-<name>Beer/Diffuse</name>
-</script>
-</material>
-</visual>
-<self_collide>0</self_collide>
-<kinematic>0</kinematic>
-<gravity>1</gravity>
-</link>
-<pose frame=''>0.888525 -2.58346 0 0 -0 0</pose>
-</model>
-<gui fullscreen='0'>
-<camera name='user_camera'>
-<pose frame=''>5 -5 2 0 0.275643 2.35619</pose>
-<view_controller>orbit</view_controller>
-<projection_type>perspective</projection_type>
-</camera>
-</gui>
-<model name='can0.50.0'>
-<static>1</static>
-<link name='link'>
-<pose frame=''>0 0 0.115 0 -0 0</pose>
-<inertial>
-<mass>0.39</mass>
-<inertia>
-<ixx>0.00058</ixx>
-<ixy>0</ixy>
-<ixz>0</ixz>
-<iyy>0.00058</iyy>
-<iyz>0</iyz>
-<izz>0.00019</izz>
-</inertia>
-</inertial>
-<visual name='visual'>
-<geometry>
-<cylinder>
-<radius>0.055</radius>
-<length>0.23</length>
-</cylinder>
-</geometry>
-<material>
-<script>
-<uri>model://fuelstation/materials/scripts</uri>
-<uri>model://fuelstation/materials/textures</uri>
-<name>fuelstation/Diffuse</name>
 </script>
 </material>
 </visual>

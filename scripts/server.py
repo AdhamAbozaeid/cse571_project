@@ -29,6 +29,7 @@ parser.add_argument('-n', help='for providing no. of obstacles to be added in th
 parser.add_argument('-s', help='for providing random seed', metavar='32', action='store', dest='seed', default=int(time.time()), type=int)
 parser.add_argument('-f', help='for providing no. of fuel stations', metavar='3', action='store', dest='num_fuel_stations', default=3, type=int)
 parser.add_argument('-b', help ='for providing initial battery level', metavar='15', action='store', dest='battery_input_value', default=10, type=int)
+parser.add_argument('-hdl', help='for running in headless mode(0 or 1)',action = 'store',dest = 'headless_mode', default = 1,type = int)
 
 def spawn_can(posx, posy,i_d,goal=0):
     parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
@@ -238,12 +239,15 @@ if __name__ == "__main__":
     
     goal_x = 0
     goal_y = 0
-    print("Enter Goal X position Eg:1.5, please use only numbers in steps of 0.5 within the grid dimension!")
+    print("Enter Goal X position Eg:1.5, please use only numbers in steps of 0.5 within "+str(args.grid_dimension/2)+"!")
     goal_x = input()
-    print("Enter Goal Y position Eg:1.5, please use only numbers in steps of 0.5 within the grid dimension!")
+    print("Enter Goal Y position Eg:1.5, please use only numbers in steps of 0.5 within "+str(args.grid_dimension/2)+"!")
     goal_y = input()
     scale = 0.5
-    spawn_can(goal_x,goal_y,0,1)
+    
+    if args.headless_mode:
+    	spawn_can(goal_x,goal_y,0,1)
+
     goal_location = [goal_x,goal_y]
     if goal_location[0]>args.grid_dimension or goal_location[1]>args.grid_dimension:
     	print("Invalid goal location! Please try again!")
