@@ -30,7 +30,7 @@ parser.add_argument('-s', help='for providing random seed', metavar='32', action
 parser.add_argument('-f', help='for providing no. of fuel stations', metavar='3', action='store', dest='num_fuel_stations', default=3, type=int)
 parser.add_argument('-b', help ='for providing initial battery level', metavar='15', action='store', dest='battery_input_value', default=10, type=int)
 parser.add_argument('-hdl', help='for running in headless mode(0 or 1)',action = 'store',dest = 'headless_mode', default = 1,type = int)
-parser.add_argument('-default-goal (0/1)',help = 'for running with default goal and skipping input',dest = 'default_goal',default = 1,type = int)
+parser.add_argument('-default-goal',help = 'for running with default goal and skipping input(0/1)',dest = 'default_goal',default = 1,type = int)
 
 def spawn_can(posx, posy,i_d,goal=0):
     parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))

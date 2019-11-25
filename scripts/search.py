@@ -18,6 +18,8 @@ import argparse
 from collections import deque
 import math
 import time 
+import numpy as np
+import pprint
 
 rospy.init_node("search_algorithms")
 publisher = rospy.Publisher("/actions", String, queue_size=10)
@@ -25,13 +27,22 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-a', help="Please mention algorithm to use. Possible arguments = {bfs, ucs, gbfs, astar}. Default value is bfs.", metavar='bfs', action='store', dest='algorithm', default="bfs", type=str)
 parser.add_argument('-c', help="Use custom heuristic function", action='store_true', dest='custom_heuristic')
 parser.add_argument('-d',help = "Use debug action sequence",action = 'store_true',dest = 'debug_mode')
+parser.add_argument('-s',help = "print states list along with action list(0/1)",action = 'store',dest = 'print_states',default = 1,type=int)
+pp = pprint.PrettyPrinter(indent=4)
 
-
+def states_from_action_list(action_list):
+    helper = problem.Helper()
+    state = helper.get_initial_state()
+    states = []
+    for action in action_list:
+        states.append(state)
+        sucs = helper.get_successor(state)
+        state,child_cost = sucs[action]
+    pp.pprint(states)
 
 def manhattan(state1,state2):
     return abs(state1.x-state2.x)+abs(state1.y-state2.y)
 
-import numpy as np
 def custom_heuristic2(state,goal):
     # use square of euclidian distance for efficiency
     eucl_dist_sqr = math.sqrt(((state.x - goal.x)**2) + ((state.y - goal.y)**2))
@@ -49,27 +60,6 @@ def custom_heuristic2(state,goal):
         return eucl_dist_sqr + 1000
     return eucl_dist_sqr
 
-def custom_heuristic(state,goal):
-    if state.x == state.y:
-        return 0
-    m = manhattan(state,goal)
-    if state.orientation == 'NORTH':
-        if state.y == goal.y:
-            return 2*m
-        return 2*m+2
-    if state.orientation == 'EAST':
-        if state.x==goal.x:
-            return 2*m
-        return 2*m+2
-    if state.orientation == 'SOUTH':
-        if state.x == goal.x:
-            return 2*m+2
-        return 2*m+4
-    if state.orientation == 'WEST':
-        if state.y == goal.y:
-            return 2*m+2
-        return 2*m+4
-    
 def bfs(use_custom_heuristic,use_debug_mode):
 
     global debug_sequence
@@ -347,16 +337,25 @@ def exec_action_list(action_list):
     publishes the list of actions to the publisher topic
     action_list: list of actions to execute
     '''
+    global print_state_path,r
+    #print("Waiting on you!")
+    #raw_input()
+
+    if print_state_path!=0:
+        states_from_action_list(action_list)
+
     plan_str = '_'.join(action for action in action_list)
     publisher.publish(String(data = plan_str))
 
 debug_sequence = ['MoveF', 'REFUEL', 'TurnCCW', 'MoveF', 'MoveF', 'MoveF', 'MoveF', 'TurnCCW', 'MoveF']
 
 if __name__ == "__main__":
-    # DO NOT MODIFY BELOW CODE
+
 
     args = parser.parse_args()
     algorithm = globals().get(args.algorithm)
+    print_state_path = args.print_states
+    r = rospy.Rate(10)
     if algorithm is None:
         print "Incorrect Algorithm name."
         exit(1)
@@ -368,8 +367,6 @@ if __name__ == "__main__":
     
     actions = algorithm(args.custom_heuristic,args.debug_mode)
     
-    
-
     time_taken = time.time() - start_time
     print("Algorithm : "+str(args.algorithm))
     print("Time Taken = " + str(time_taken))
