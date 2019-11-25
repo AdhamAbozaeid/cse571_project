@@ -35,6 +35,13 @@ import numpy as np
 def custom_heuristic2(state,goal):
     # use square of euclidian distance for efficiency
     eucl_dist_sqr = math.sqrt(((state.x - goal.x)**2) + ((state.y - goal.y)**2))
+
+    theta = math.degrees(math.atan2(abs(state.y-goal.y), abs(state.x-goal.x)))
+    if theta > 0 and theta <= 45:
+        eucl_dist_sqr += 2
+    elif theta > 45 and theta <= 90:
+        eucl_dist_sqr += 4
+
     # Penalize if the battery isn't enough to reach the goal
     # Number of steps is at minimum the euclidian distance / 0.5sqrt(2)
     no_steps_sqr = eucl_dist_sqr/0.707
@@ -310,7 +317,6 @@ def astar(use_custom_heuristic,use_debug_mode):
         node = item.pop()
         node_actions = item.pop()
         node_cum_cost = item.pop()
-        print node , node_actions
         if helper.is_goal_state(node):
             return node_actions
 
@@ -330,7 +336,6 @@ def astar(use_custom_heuristic,use_debug_mode):
             if (str(child_node) not in explored):
                 actions.append(action)
                 total_cost = child_heuristic+child_cost
-                print child_node, total_cost 
                 item = [total_cost,counter,child_cost,actions,child_node]
                 heapq.heappush(frontier,item)
 
