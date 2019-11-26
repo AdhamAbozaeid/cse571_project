@@ -53,11 +53,6 @@ def custom_heuristic2(state,goal):
     elif theta > 45 and theta <= 90:
         eucl_dist_sqr += 4
 
-    # Penalize if the battery isn't enough to reach the goal
-    # Number of steps is at minimum the euclidian distance / 0.5sqrt(2)
-    no_steps_sqr = eucl_dist_sqr/0.707
-    if no_steps_sqr > (state.battery):
-        return eucl_dist_sqr + 1000
     return eucl_dist_sqr
 
 def bfs(use_custom_heuristic,use_debug_mode):
